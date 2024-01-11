@@ -1,6 +1,11 @@
 package PresentationLayer.menus;
 
-public class AdminMenu {
+public class AdminMenu implements Menu{
+    @Override
+    public void startMenu(){
+        adminMenuStarter();
+    }
+
     public static void adminMenuStarter(){
         System.out.println("Welcome to Caravan Rental System:");
         System.out.println("Admin Menu");

@@ -7,10 +7,13 @@ import BusinessLayer.services.ReviewService;
 import DataAccessLayer.models.Client;
 import DataAccessLayer.repositories.CaravanRepository;
 import PresentationLayer.menus.AdminMenu;
+import utils.TimerThread;
+import utils.TimerThread.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Timer;
 
 
 public class AdminController {
@@ -30,7 +33,8 @@ public class AdminController {
     }
 
     public void displayAdminMenuStarter(){
-        AdminMenu.adminMenuStarter();
+        AdminMenu adminMenu = new AdminMenu();
+        adminMenu.startMenu();
 
         int choice = 0;
 
@@ -54,6 +58,16 @@ public class AdminController {
                 break;
             }
             case 5:{
+                System.out.println("How much time you were running the program seconds");
+                TimerThread timer = TimerThread.getInstance();
+                System.out.println(timer.getTime());
+
+                try{
+                    timer.stop();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
                 break;
             }
             default: {

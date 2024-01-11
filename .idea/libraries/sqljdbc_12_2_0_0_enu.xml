@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sqljdbc_12.2.0.0_enu">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CaravanRentalSystem/out/production/CaravanRentalSystem/utils/sqljdbc_12.2.0.0_enu.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

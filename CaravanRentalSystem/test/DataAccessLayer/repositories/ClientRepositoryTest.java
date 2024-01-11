@@ -18,7 +18,6 @@ class ClientRepositoryTest {
         clientRepository = ClientRepository.getInstance();
 
         assertNotNull(clientRepository);
-
     }
 
     @Test
@@ -35,9 +34,12 @@ class ClientRepositoryTest {
     void getClientById() {
         Client client = new Client();
         int expectedId = 1;
+        String expectedEmailAddress = "dmakiver0@geocities.jp";
         ClientRepository clientRepository = ClientRepository.getInstance();
 
         client = clientRepository.getClientById(expectedId);
+
+        assertEquals(client.getEmailAddress(), expectedEmailAddress);
     }
     @Test
     void getClientByEmailAddress(){
@@ -47,6 +49,7 @@ class ClientRepositoryTest {
 
         client = clientRepository.getClientByEmailAddress(expectedEmailAddress);
 
+        assertEquals(client.getClientId(), 1);
     }
 
     @Test
